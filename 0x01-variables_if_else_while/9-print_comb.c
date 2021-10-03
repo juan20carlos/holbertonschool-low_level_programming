@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char c = 44;
-	char e = 32;
+	int c = 44;
+	int e = 32;
 	int n = 48;
 
 	while (n <= 57)
