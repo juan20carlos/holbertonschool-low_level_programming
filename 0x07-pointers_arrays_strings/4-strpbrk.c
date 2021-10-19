@@ -22,16 +22,6 @@ char *_strpbrk(char *s, char *accept)
 			{
 				return (s + i);
 			}
-			if (*(s + i) == ',')
-			{
-				*(s + i) = ',';
-				return (s + i);
-			}
-			if (*(s + i) == ' ')
-			{
-				*(s + i) = ' ';
-				return (s + i);
-			}
 			j++;
 		}
 		i++;
