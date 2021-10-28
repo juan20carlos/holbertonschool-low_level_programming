@@ -7,11 +7,10 @@
  * @s1: pointer
  * @s2: pointer
  * Return: NULL
- *
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j;
+	int i, j, k, l;
 	char *p;
 
 	if (s1 == NULL)
@@ -28,13 +27,14 @@ char *str_concat(char *s1, char *s2)
 		for (j = 0; s2[j]; j++)
 			;
 	}
-	p = malloc((i + j + 1) * sizeof(char));
+	k = i + j + 1;
+	p = malloc(k * sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; s1[i]; i++)
-		p[i] = s1[i];
-	for (j = 0; s2[j]; j++)
-		p[i + j] = s2[j];
+	for (l = 0; l < i; l++)
+		p[l] = s1[l];
+	for (l = 0; l < j; l++)
+		p[l + i] = s2[l];
 	p[i + j] = '\0';
 	return (p);
 }
