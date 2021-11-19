@@ -1,0 +1,27 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * binary_to_uint - convierte binario a decimal
+ *
+ * @b: puntero que apunto a la cadena
+ * Return: NULL or numero
+ */
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int numero = 0;
+
+	while (*b != '\0')
+	{
+		if (*b != '1' && *b != '0')
+		{
+			return (0);
+		}
+		numero = numero << 1;
+		if (*b == '1')
+		{
+			numero = numero ^ 1;
+		}
+		b++;
+	}
+	return (numero);
+}
