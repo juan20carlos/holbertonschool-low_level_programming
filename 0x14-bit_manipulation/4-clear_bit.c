@@ -10,7 +10,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int numero;
 
-	if (index > (8 * u sizeof(unsigned long int)))
+	if (index > (8 * sizeof(unsigned long int)))
 	{
 		return (-1);
 	}
